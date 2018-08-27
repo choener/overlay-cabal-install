@@ -1,0 +1,12 @@
+diff --git a/Distribution/Client/ProjectPlanOutput.hs b/Distribution/Client/ProjectPlanOutput.hs
+index 8eb5eed..8a2ac00 100644
+--- cabal-install/Distribution/Client/ProjectPlanOutput.hs
++++ cabal-install/Distribution/Client/ProjectPlanOutput.hs
+@@ -714,6 +714,7 @@ writePlanGhcEnvironment path
+                         postBuildStatus
+   | compilerFlavor compiler == GHC
+   , supportsPkgEnvFiles (getImplInfo compiler)
++  , False
+   --TODO: check ghcjs compat
+   = fmap Just $ writeGhcEnvironmentFile
+       path
